@@ -19,36 +19,32 @@ body {
     background-color: var(--color-dark);
     color: var(--color-primary);
     line-height: 1.6;
-    padding-left: 20px; /* Left padding for consistent left-alignment */
-    text-align: left; /* Align all text to the left */
+    padding-left: 20px;
+    text-align: left;
 }
 
 header {
     background-color: var(--color-darker);
     padding: 1rem;
-    width: 100%; /* Ensure header stretches full width */
+    width: 100%;
 }
 
-header .logo h1 {
-    color: var(--color-primary);
-    text-align: left; /* Left-align the logo */
-}
-
-/* Updated Nav to stretch full width */
 nav {
     display: flex;
-    justify-content: space-between; /* Space links evenly */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Stretches across the full width */
-    padding: 1rem 0;
+    width: 100%;
+}
+
+nav .logo h1 {
+    color: var(--color-primary);
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    width: 100%; /* Ensure the links stretch across the width */
-    margin: 0;
+    width: 100%;
     padding: 0;
 }
 
@@ -56,39 +52,41 @@ nav ul li a {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem; /* Add padding for better click area */
+    transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
 nav ul li a:hover {
+    background-color: var(--color-secondary); /* Add hover effect */
     color: var(--color-accent);
 }
 
 #hero {
+    text-align: left;
     padding: 2rem;
     background-color: var(--color-secondary);
-    margin: 0;
 }
 
 #hero h2 {
     font-size: 2.5rem;
     color: var(--color-primary);
-    text-align: left; /* Left-align hero section */
 }
 
 #hero p {
     font-size: 1.2rem;
     color: var(--color-primary);
-    text-align: left; /* Left-align hero paragraph */
 }
 
 section {
-    padding: 2rem 0;
-    text-align: left; /* Left-align all sections */
+    padding: 2rem;
+    text-align: left;
 }
 
 #about, #projects, #contact {
     background-color: var(--color-dark);
     color: var(--color-primary);
+    margin: 1rem 0;
+    border-radius: 10px; /* Add rounded corners */
 }
 
 h2 {
@@ -102,7 +100,11 @@ h2 {
     padding: 1.5rem;
     margin: 1rem 0;
     border-radius: 10px;
-    text-align: left; /* Left-align project cards */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .project-card h3 {
@@ -111,43 +113,8 @@ h2 {
 }
 
 footer {
-    text-align: left; /* Left-align footer */
+    text-align: left;
     padding: 1rem;
     background-color: var(--color-darker);
     color: var(--color-primary);
-}
-
-/* Dropdown content hidden by default */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    white-space: nowrap; /* Ensure links don't wrap */
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropbtn {
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
-
-/* Show dropdown when active */
-.dropdown-content.show {
-    display: block;
 }
