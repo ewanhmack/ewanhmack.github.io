@@ -1,12 +1,101 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming</title>
+    
+    <!-- External CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="burgerMenu.js"></script>
+
+    <title>Coding Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Additional styles for the coding portfolio page */
+        /* Ensure links in project cards stand out */
+        .project-card a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>This page will include all of my personal programming projects</h1>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <ion-icon name="reorder-two-outline" id="menuIcon"></ion-icon>
+            </button>
+            <div class="dropdown-content" id="menuContent">
+                <a href="index.html">Home Page</a>
+                <a href="code-products.html">Programming</a>
+                <a href="photography.html">Photography</a>
+                <a href="contact.html">Contact me</a>
+            </div>
+        </div>
+    </header>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi suscipit numquam molestias similique maxime sint nisi perferendis itaque delectus, quaerat qui. Minus iste velit odio ab assumenda recusandae quidem obcaecati.</p>
+    <section id="hero">
+        <h2>My Coding Projects</h2>
+        <p>Here you will find a collection of my coding and development projects, ranging from web apps to software tools.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Coding Projects</h2>
+
+        <!-- First Project -->
+        <div class="project-card">
+            <h3>Project 1: Web Application</h3>
+            <p>This is a full-stack web application built using HTML, CSS, JavaScript, and a Node.js backend. It allows users to manage tasks and collaborate on projects in real time.</p>
+            <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Second Project -->
+        <div class="project-card">
+            <h3>Project 2: Data Visualization Tool</h3>
+            <p>Developed using Python and Plotly, this tool allows users to upload CSV files and generate interactive data visualizations, providing insights into large datasets.</p>
+            <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Third Project -->
+        <div class="project-card">
+            <h3>Project 3: Mobile App</h3>
+            <p>A mobile application built with React Native that helps users track their fitness activities, providing features like workout logging, progress tracking, and social sharing.</p>
+            <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Add more project cards as needed -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Coding Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for burger menu
+        const menuIcon = document.getElementById('menuIcon');
+        const menuContent = document.getElementById('menuContent');
+
+        menuIcon.addEventListener('click', function() {
+            menuContent.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.matches('#menuIcon')) {
+                menuContent.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

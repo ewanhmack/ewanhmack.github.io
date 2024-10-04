@@ -1,12 +1,110 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
+    
+    <!-- External CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="burgerMenu.js"></script>
+
+    <title>Photography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Additional styles for the photography portfolio page */
+        .photo-card {
+            background-color: var(--color-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .photo-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .photo-card h3 {
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>This will include all of my photography projects</h1>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <ion-icon name="reorder-two-outline" id="menuIcon"></ion-icon>
+            </button>
+            <div class="dropdown-content" id="menuContent">
+                <a href="index.html">Home Page</a>
+                <a href="code-products.html">Programming</a>
+                <a href="photography.html">Photography</a>
+                <a href="contact.html">Contact me</a>
+            </div>
+        </div>
+    </header>
 
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut iusto reprehenderit, neque magni reiciendis earum repudiandae rerum sed. Cumque quod veritatis eos maiores molestias veniam earum minima omnis quibusdam porro?</p>
+    <section id="hero">
+        <h2>My Photography Portfolio</h2>
+        <p>Explore my collection of photographs, capturing moments from nature, cityscapes, and more.</p>
+    </section>
+
+    <section id="photography-portfolio">
+        <h2>Photography Collection</h2>
+
+        <!-- First Photo Album -->
+        <div class="photo-card">
+            <h3>Album 1: Nature</h3>
+            <img src="images/nature.jpg" alt="Nature Photography">
+            <p>A collection of nature shots, from scenic landscapes to close-ups of wildlife.</p>
+        </div>
+
+        <!-- Second Photo Album -->
+        <div class="photo-card">
+            <h3>Album 2: Cityscapes</h3>
+            <img src="images/cityscape.jpg" alt="Cityscape Photography">
+            <p>Urban landscapes captured at different times of the day, highlighting architecture and street life.</p>
+        </div>
+
+        <!-- Third Photo Album -->
+        <div class="photo-card">
+            <h3>Album 3: Portraits</h3>
+            <img src="images/portraits.jpg" alt="Portrait Photography">
+            <p>Portrait photography featuring people in candid moments and formal settings.</p>
+        </div>
+
+        <!-- Add more photo albums as needed -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for burger menu
+        const menuIcon = document.getElementById('menuIcon');
+        const menuContent = document.getElementById('menuContent');
+
+        menuIcon.addEventListener('click', function() {
+            menuContent.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.matches('#menuIcon')) {
+                menuContent.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
