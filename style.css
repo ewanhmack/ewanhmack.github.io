@@ -99,6 +99,13 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Ensure that the link does not affect the card’s appearance */
+.project-card-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* Add styles to the project card */
 .project-card {
     background-color: var(--color-secondary);
     padding: 1.5rem;
@@ -108,7 +115,7 @@ h2 {
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
+    transform: scale(0.95); /* Slightly scale up on hover */
 }
 
 .project-card h3 {
