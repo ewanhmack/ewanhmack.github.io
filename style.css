@@ -52,13 +52,15 @@ nav ul li a {
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem; /* Add padding for better click area */
-    transition: background-color 0.3s; /* Smooth transition for hover */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for both transform and background */
 }
 
 nav ul li a:hover {
-    background-color: var(--color-secondary); /* Add hover effect */
+    background-color: var(--color-secondary); /* Add background color on hover */
     color: var(--color-accent);
+    transform: scale(0.95); /* Shrinks the link slightly on hover */
 }
+
 
 main {
     padding-left: 0; /* Ensure main content starts at the left edge */
