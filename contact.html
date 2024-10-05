@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <title>My Portfolio</title>
+    <title>Contact Me</title>
 </head>
 <body>
     <header>
@@ -16,7 +16,7 @@
             </div>
             <ul>
                 <li><a href="index.html">Home Page</a></li>
-                <li><a href="code-products.html">Programming</a></li>
+                <li><a href="programming.html">Programming</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="contact.html">Contact me</a></li>
             </ul>
@@ -32,23 +32,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <p>© Ewan Mackerracher 2024. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript for burger menu
-        const menuIcon = document.getElementById('menuIcon');
-        const menuContent = document.getElementById('menuContent');
-
-        menuIcon.addEventListener('click', function() {
-            menuContent.classList.toggle('show');
-        });
-
-        window.addEventListener('click', function(event) {
-            if (!event.target.matches('.dropbtn') && !event.target.matches('#menuIcon')) {
-                menuContent.classList.remove('show');
-            }
-        });
-    </script>
 </body>
 </html>
