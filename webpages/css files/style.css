@@ -21,6 +21,12 @@ body {
     line-height: 1.6;
 }
 
+img {
+    width: 50%; /* Adjust this value to control the image size */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 300px; /* You can set a maximum width to prevent oversized images */
+}
+
 /* Remove the left gap */
 header {
     background-color: var(--color-darker);
