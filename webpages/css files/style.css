@@ -24,7 +24,7 @@ body {
 img {
     width: 80%; /* Adjust this value to control the image size */
     height: auto; /* Maintains aspect ratio */
-    max-width: 600px; /* You can set a maximum width to prevent oversized images */
+    max-width: 700px; /* You can set a maximum width to prevent oversized images */
 }
 
 /* Remove the left gap */
