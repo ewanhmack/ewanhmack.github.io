@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css files/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Programming</title>
+    <style>
+        /* Add styles for the two-column layout */
+        .photo-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .photo-card .image-container {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .photo-card .image-container:last-child {
+            margin-right: 0; /* Remove margin for the last container */
+        }
+
+        .photo-card img {
+            max-width: 700px;
+            width: 100%; /* Ensure the image fills its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .photo-card .text-container {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        /* Ensure responsiveness for smaller screens */
+        @media (max-width: 768px) {
+            .photo-card {
+                flex-direction: column;
+            }
+
+            .photo-card .image-container,
+            .photo-card .text-container {
+                margin-right: 0;
+                margin-left: 0;
+                width: 100%; /* Make them full width on small screens */
+            }
+
+            .photo-card img {
+                margin-bottom: 10px; /* Add space between images and text on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>My Portfolio</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home Page</a></li>
+                <li><a href="../programming.html">Programming</a></li>
+                <li><a href="../photography.html">Photography</a></li>
+                <li><a href="../contact.html">Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>My Programming Portfolio</h2>
+        <p>Here is a list of all of my programming projects, ranging between games made in Unreal, to websites made in VS Code.</p>
+    </section>
+
+    <section id="programming-portfolio">
+        <h2>Programming Projects</h2>
+        <h3>Project 2: 3D Photography Game</h3>
+        <!-- Second Project -->
+        <div class="photo-card">
+            <div class="image-container">
+                <img src="../projects/photo-game/Unreal.jpg" alt="Cityscape Photography">
+            </div>
+            <div class="text-container">
+                <p>I created a procedurally generated island with 4 different biomes.</p>
+            </div>
+            
+        </div>
+        <div class="photo-card">
+            <div class="text-container">
+                <p>The blueprint script I created to zoom the camera into the viewfinder.</p>
+            </div>
+            <div class="image-container">
+                <img src="../projects/photo-game/blueprints.jpg" alt="Blueprint Scripting">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Ewan Mackerracher 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
