@@ -1,24 +1,62 @@
+:root {
+    --color-dark-taupe: #4b4237;
+    --color-goldenrod: #d5a021;
+    --color-light-gold: #e1c47d;
+    --color-light-beige: #ede7d9;
+    --color-warm-gray: #c9bfb7;
+    --color-soft-mauve: #a49694;
+    --color-warm-gray-brown: #736b60;
+    --color-muted-taupe: #80786e;
+    --color-soft-taupe: #8c847b;
+
+    /* Additional variables for your existing color setup */
+    --color-dark: var(--color-dark-taupe);
+    --color-primary: var(--color-light-beige);
+    --color-secondary: var(--color-warm-gray);
+    --color-accent: var(--color-goldenrod);
+    --color-darker: var(--color-warm-gray-brown);
+}
+
 .photo-card {
-    background-color: var(--color-secondary); /* Styling the card */
+    background-color: var(--color-secondary); /* Use the light beige background for the card */
     padding: 1.5rem;
     margin: 1rem 0;
-    border-radius: 10px;
-    text-align: left; /* Align text to the left */
+    border-radius: 10px; /* Rounded corners for the card */
+    text-align: center; /* Center the text */
+    border: 1px solid var(--color-accent); /* Light border for the card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative; /* Positioning for the pseudo-element */
 }
 
 .photo-card img {
     width: 100%; /* Make the image take up 100% of the card width */
     max-width: 600px; /* Add a max width to prevent the image from becoming too large */
     height: auto; /* Maintain the aspect ratio of the image */
-    border-radius: 8px; /* Optional: Add rounded corners */
+    border-radius: 8px; /* Rounded corners for the image */
     margin-top: 10px; /* Add space between the image and the title */
+    border: 5px solid white; /* White border around the image for the Polaroid effect */
 }
 
 .photo-card h3 {
-    color: var(--color-accent);
-    margin-bottom: 0.5rem;
+    color: var(--color-accent); /* Use the goldenrod for the titles */
+    margin: 0.5rem 0; /* Adjust margin for titles */
 }
 
 .photo-card p {
     margin-top: 0.5rem;
+    color: var(--color-dark); /* Use dark taupe for the text */
+}
+
+/* Create the Polaroid bottom effect */
+.photo-card::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block;
+    width: 100%;
+    height: 10px; /* Height for the Polaroid bottom */
+    background-color: var(--color-secondary); /* Match the background color */
+    position: absolute;
+    bottom: -10px; /* Position it below the card */
+    left: 0; /* Align to the left */
+    border-radius: 10px 10px 0 0; /* Rounded corners for the bottom */
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
 }

@@ -1,46 +1,56 @@
+:root {
+    --color-dark-taupe: #4b4237;
+    --color-goldenrod: #d5a021;
+    --color-light-gold: #e1c47d;
+    --color-light-beige: #ede7d9;
+    --color-warm-gray: #c9bfb7;
+    --color-soft-mauve: #a49694;
+    --color-warm-gray-brown: #736b60;
+    --color-muted-taupe: #80786e;
+    --color-soft-taupe: #8c847b;
+
+    /* Additional variables for your existing color setup */
+    --color-dark: var(--color-dark-taupe);
+    --color-primary: var(--color-light-beige);
+    --color-secondary: var(--color-warm-gray);
+    --color-accent: var(--color-goldenrod);
+    --color-darker: var(--color-warm-gray-brown);
+}
 
 
 .photo-card {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-secondary); /* Corrected with var() */
+    border: 1px solid var(--color-accent);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     margin-bottom: 20px;
-}
-
-.photo-card .image-container {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.photo-card .image-container:last-child {
-    margin-right: 0; /* Remove margin for the last container */
+    width: 100%;
 }
 
 .photo-card img {
-    max-width: 700px;
-    width: 100%; /* Ensure the image fills its container */
-    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.photo-card p {
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--color-dark);
 }
 
 .photo-card .text-container {
-    flex: 1;
-    margin-left: 20px;
+    margin-top: 10px;
 }
 
-/* Ensure responsiveness for smaller screens */
 @media (max-width: 768px) {
     .photo-card {
-        flex-direction: column;
-    }
-
-    .photo-card .image-container,
-    .photo-card .text-container {
-        margin-right: 0;
-        margin-left: 0;
-        width: 100%; /* Make them full width on small screens */
-    }
-
-    .photo-card img {
-        margin-bottom: 10px; /* Add space between images and text on mobile */
+        max-width: 100%;
     }
 }

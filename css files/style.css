@@ -1,11 +1,23 @@
 /* Color palette */
 :root {
-    --color-primary: #8AB0AB; /* Main color */
-    --color-secondary: #3E505B; /* Darker secondary */
-    --color-accent: #26413C; /* Accent */
-    --color-dark: #1A1D1A; /* Background dark */
-    --color-darker: #03120E; /* Even darker for contrast */
+    --color-dark-taupe: #4b4237;
+    --color-goldenrod: #d5a021;
+    --color-light-gold: #e1c47d;
+    --color-light-beige: #ede7d9;
+    --color-warm-gray: #c9bfb7;
+    --color-soft-mauve: #a49694;
+    --color-warm-gray-brown: #736b60;
+    --color-muted-taupe: #80786e;
+    --color-soft-taupe: #8c847b;
+
+    /* Additional variables for your existing color setup */
+    --color-dark: var(--color-dark-taupe);
+    --color-primary: var(--color-light-beige);
+    --color-secondary: var(--color-warm-gray);
+    --color-accent: var(--color-goldenrod);
+    --color-darker: var(--color-warm-gray-brown);
 }
+
 
 /* Global styles */
 * {
@@ -22,9 +34,9 @@ body {
 }
 
 img {
-    width: 80%; /* Adjust this value to control the image size */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 700px; /* You can set a maximum width to prevent oversized images */
+    width: 80%;
+    height: auto;
+    max-width: 700px;
 }
 
 /* Remove the left gap */
@@ -57,19 +69,17 @@ nav ul li a {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem; /* Add padding for better click area */
-    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for both transform and background */
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 nav ul li a:hover {
-    
     color: var(--color-accent);
-    transform: scale(0.95); /* Shrinks the link slightly on hover */
+    transform: scale(0.95);
 }
 
-
 main {
-    padding-left: 0; /* Ensure main content starts at the left edge */
+    padding-left: 0;
 }
 
 #hero {
@@ -91,14 +101,14 @@ main {
 section {
     padding: 2rem;
     text-align: left;
-    width: 100%; /* Ensure sections use full width */
+    width: 100%;
 }
 
 #about, #projects, #contact {
     background-color: var(--color-dark);
     color: var(--color-primary);
     margin: 1rem 0;
-    border-radius: 10px; /* Add rounded corners */
+    border-radius: 10px;
 }
 
 h2 {
@@ -110,20 +120,19 @@ h2 {
 /* Ensure that the link does not affect the card’s appearance */
 .project-card-link {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
 }
 
-/* Add styles to the project card */
 .project-card {
     background-color: var(--color-secondary);
     padding: 1.5rem;
     margin: 1rem 0;
     border-radius: 10px;
-    transition: transform 0.3s; /* Smooth hover effect */
+    transition: transform 0.3s;
 }
 
 .project-card:hover {
-    transform: scale(0.95); /* Slightly scale up on hover */
+    transform: scale(0.95);
 }
 
 .project-card h3 {
