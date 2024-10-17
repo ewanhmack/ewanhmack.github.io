@@ -1,24 +1,35 @@
-/* Color palette */
 :root {
-    --color-dark-taupe: #4b4237;
-    --color-goldenrod: #d5a021;
-    --color-light-gold: #e1c47d;
-    --color-light-beige: #ede7d9;
-    --color-warm-gray: #c9bfb7;
-    --color-soft-mauve: #a49694;
-    --color-warm-gray-brown: #736b60;
-    --color-muted-taupe: #80786e;
-    --color-soft-taupe: #8c847b;
+    --color-1: #ECE7E2;
+    --color-2: #9eaa9d;
+    --color-3: #779283;
+    --color-4: #627f73;
+    --color-5: #4A7766;
 
-    /* Additional variables for your existing color setup */
-    --color-dark: var(--color-dark-taupe);
-    --color-primary: var(--color-light-beige);
-    --color-secondary: var(--color-warm-gray);
-    --color-accent: var(--color-goldenrod);
-    --color-darker: var(--color-warm-gray-brown);
+    /* Mapped colors */
+    --color-primary: var(--color-2);/* Text */
+    --color-secondary: var(--color-4); /* Hero and select box*/
+    --color-accent: var(--color-3); /* Text for select box*/
+    --color-dark: var(--color-3); /*Background */
+    --color-darker: var(--color-5); /*Footer */
 }
 
-
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--color-5);
+    background-color: transparent;
+    text-decoration: underline;
+  }
 /* Global styles */
 * {
     margin: 0;
