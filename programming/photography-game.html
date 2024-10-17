@@ -4,56 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css files/style.css">
+    <link rel="stylesheet" href="../css files/programming.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Programming</title>
-    <style>
-        /* Add styles for the two-column layout */
-        .photo-card {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .photo-card .image-container {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .photo-card .image-container:last-child {
-            margin-right: 0; /* Remove margin for the last container */
-        }
-
-        .photo-card img {
-            max-width: 700px;
-            width: 100%; /* Ensure the image fills its container */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .photo-card .text-container {
-            flex: 1;
-            margin-left: 20px;
-        }
-
-        /* Ensure responsiveness for smaller screens */
-        @media (max-width: 768px) {
-            .photo-card {
-                flex-direction: column;
-            }
-
-            .photo-card .image-container,
-            .photo-card .text-container {
-                margin-right: 0;
-                margin-left: 0;
-                width: 100%; /* Make them full width on small screens */
-            }
-
-            .photo-card img {
-                margin-bottom: 10px; /* Add space between images and text on mobile */
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -84,13 +38,20 @@
                 <img src="../projects/photo-game/Unreal.jpg" alt="Cityscape Photography">
             </div>
             <div class="text-container">
-                <p>I created a procedurally generated island with 4 different biomes.</p>
+                <p>I created a procedurally generated island with 4 different biomes. So far there is no aim to my game, apart from wondering around and taking photos of your surroundings</p>
+                <br>
+                <p>You have the basic WASD controls, pressing rmb to enter the camera viewfinder and the ability to zoom in and out with the scroll wheel</p>
+                <br>
+                <p>All of the photos you take in game are stored within the unreal file, and in the future i plan to add an ingame portfolio system that will allow the user to view all of the photos they have taken</p>
+
             </div>
             
         </div>
         <div class="photo-card">
             <div class="text-container">
-                <p>The blueprint script I created to zoom the camera into the viewfinder.</p>
+                <p>The blueprint script I created to zoom the camera into the viewfinder. When rmb is clicked once it enters the viewfinder and stays there until rmb is clicked again.</p>
+                <br>
+                <p>Currently it does this by moving the camera 50 units forward in the x direction, dependant on the direction the user is facing. I plan to change this system so that it uses a camera arm instead</p>
             </div>
             <div class="image-container">
                 <img src="../projects/photo-game/blueprints.jpg" alt="Blueprint Scripting">

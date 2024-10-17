@@ -1,0 +1,46 @@
+
+
+.photo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.photo-card .image-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.photo-card .image-container:last-child {
+    margin-right: 0; /* Remove margin for the last container */
+}
+
+.photo-card img {
+    max-width: 700px;
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.photo-card .text-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .photo-card {
+        flex-direction: column;
+    }
+
+    .photo-card .image-container,
+    .photo-card .text-container {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%; /* Make them full width on small screens */
+    }
+
+    .photo-card img {
+        margin-bottom: 10px; /* Add space between images and text on mobile */
+    }
+}
