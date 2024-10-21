@@ -1,18 +1,20 @@
 @IMPORT url('https://fonts.googleapis.com/css?family=Poor+Story');
 
 :root {
-  --color-1: #ECE7E2;
-  --color-2: #9eaa9d;
-  --color-3: #779283;
-  --color-4: #627f73;
-  --color-5: #4A7766;
+  --color-1: #2471a3; /* Dark Blue */
+  --color-2: #1D4E89; /* Medium Blue */
+  --color-3: #A3D6E7; /* Light Blue */
+  --color-4: #E1F5FE; /* Very Light Cyan */
+  --color-5: #5dade2; /* Mustard Yellow */
+  --color-6: #2A2D34; /* Dark Gray */
 
   /* Mapped colors */
-  --color-primary: var(--color-2);/* Text */
-  --color-secondary: var(--color-4); /* Hero and select box*/
-  --color-accent: var(--color-3); /* Text for select box*/
-  --color-dark: var(--color-3); /*Background */
-  --color-darker: var(--color-5); /*Footer */
+  --color-primary: var(--color-1); /* Text */
+  --color-secondary: var(--color-2); /* Hero and select box */
+  --color-accent: var(--color-3); /* Text for select box */
+  --color-dark: var(--color-4); /* Background */
+  --color-darker: var(--color-6); /* Footer */
+  --color-links: var(--color-5); /* Links */
 }
 
 

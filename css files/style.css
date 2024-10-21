@@ -1,35 +1,42 @@
 :root {
-    --color-1: #ECE7E2;
-    --color-2: #9eaa9d;
-    --color-3: #779283;
-    --color-4: #627f73;
-    --color-5: #4A7766;
+    /* Primary text color throughout the site */
+    --color-text-primary: #ffffff; /* Body text, nav logo, headings */
 
-    /* Mapped colors */
-    --color-primary: var(--color-2);/* Text */
-    --color-secondary: var(--color-4); /* Hero and select box*/
-    --color-accent: var(--color-3); /* Text for select box*/
-    --color-dark: var(--color-3); /*Background */
-    --color-darker: var(--color-5); /*Footer */
+    /* Background color for sections */
+    --color-background-secondary: #1D4E89; /* Hero section and project cards */
+
+    /* Accent color for interactive elements */
+    --color-accent: #A3D6E7; /* Hover effects for nav links and project card headings */
+
+    /* Light background color for main sections */
+    --color-background-light: #E1F5FE; /* Background for about, projects, and contact sections */
+
+    /* Darker background for headers and footers */
+    --color-background-darker: #2A2D34; /* Header and footer background */
+
+    /* Link colors */
+    --color-link: #2471a3; /* Regular, visited, and hover states for links */
 }
 
+/* Usage of color variables */
 a:link {
-    color: green;
+    color: var(--color-text-primary); /* Link color for unvisited links */
     background-color: transparent;
     text-decoration: none;
-  }
+}
   
-  a:visited {
-    color: pink;
+a:visited {
+    color: var(--color-text-primary); /* Link color for visited links */
     background-color: transparent;
     text-decoration: none;
-  }
+}
   
-  a:hover {
-    color: var(--color-5);
+a:hover {
+    color: var(--color-text-primary); /* Link color for hovered links */
     background-color: transparent;
-    text-decoration: underline;
-  }
+    text-decoration: none;
+}
+
 /* Global styles */
 * {
     margin: 0;
@@ -39,8 +46,8 @@ a:link {
 }
 
 body {
-    background-color: var(--color-dark);
-    color: var(--color-primary);
+    background-color: var(--color-background-light); /* Main background color */
+    color: var(--color-text-primary); /* Main text color */
     line-height: 1.6;
 }
 
@@ -50,9 +57,9 @@ img {
     max-width: 700px;
 }
 
-/* Remove the left gap */
+/* Header styles */
 header {
-    background-color: var(--color-darker);
+    background-color: var(--color-background-darker); /* Header background */
     padding: 1rem;
     width: 100%;
 }
@@ -65,7 +72,7 @@ nav {
 }
 
 nav .logo h1 {
-    color: var(--color-primary);
+    color: var(--color-text-primary); /* Logo color */
 }
 
 nav ul {
@@ -75,18 +82,39 @@ nav ul {
     width: 100%;
     padding: 0;
 }
+/* Header link styles */
+nav ul li {
+    position: relative; /* Make sure the list items are positioned relative */
+    text-decoration: none;
+}
 
 nav ul li a {
-    color: var(--color-primary);
+    color: var(--color-text-primary); /* Link color */
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: color 0.3s; /* Smooth color transition */
+}
+nav ul li a:hover {
+    text-decoration: none;
+}
+/* Underline effect */
+nav ul li a::after {
+    content: ''; /* Empty content for pseudo-element */
+    display: block; /* Make it a block element */
+    height: 2px; /* Height of the underline */
+    background: var(--color-text-primary); /* Color of the underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Start at the middle */
+    bottom: 0; /* Align to the bottom */
+    width: 0; /* Initial width */
+    transition: width 0.3s ease, left 0.3s ease; /* Animation for width and position */
 }
 
-nav ul li a:hover {
-    color: var(--color-accent);
-    transform: scale(0.95);
+/* On hover, expand the underline */
+nav ul li a:hover::after {
+    width: 100%; /* Expand to full width */
+    left: 0; /* Align to the left */
 }
 
 main {
@@ -96,17 +124,17 @@ main {
 #hero {
     text-align: left;
     padding: 2rem;
-    background-color: var(--color-secondary);
+    background-color: var(--color-background-secondary); /* Hero section background */
 }
 
 #hero h2 {
     font-size: 2.5rem;
-    color: var(--color-primary);
+    color: var(--color-text-primary); /* Hero heading color */
 }
 
 #hero p {
     font-size: 1.2rem;
-    color: var(--color-primary);
+    color: var(--color-text-primary); /* Hero paragraph color */
 }
 
 section {
@@ -115,15 +143,27 @@ section {
     width: 100%;
 }
 
-#about, #projects, #contact {
-    background-color: var(--color-dark);
-    color: var(--color-primary);
+#about {
+    background-color: var(--color-background-light); /* Section background */
+    color: var(--color-link); /* Section text color */
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+#contact {
+    background-color: var(--color-background-light); /* Section background */
+    color: var(--color-link); /* Section text color */
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+#projects{
+    background-color: var(--color-background-light); /* Section background */
+    color: var(--color-text-primary); /* Section text color */
     margin: 1rem 0;
     border-radius: 10px;
 }
 
 h2 {
-    color: var(--color-primary);
+    color: var(--color-link); /* Section heading color */
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -135,7 +175,7 @@ h2 {
 }
 
 .project-card {
-    background-color: var(--color-secondary);
+    background-color: var(--color-background-secondary); /* Project card background */
     padding: 1.5rem;
     margin: 1rem 0;
     border-radius: 10px;
@@ -147,13 +187,13 @@ h2 {
 }
 
 .project-card h3 {
-    color: var(--color-accent);
+    color: var(--color-accent); /* Project card heading color */
     margin-bottom: 0.5rem;
 }
 
 footer {
     text-align: left;
     padding: 1rem;
-    background-color: var(--color-darker);
-    color: var(--color-primary);
+    background-color: var(--color-background-darker); /* Footer background */
+    color: var(--color-text-primary); /* Footer text color */
 }
